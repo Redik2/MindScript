@@ -2,5 +2,5 @@ package compilers.codeParts.blockControlsCodeParts;
 
 import compilers.codeParts.CodePart;
 
-public class BControlCP extends CodePart {
+public class Sensor extends CodePart{
 }

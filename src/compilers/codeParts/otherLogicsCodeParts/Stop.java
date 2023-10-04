@@ -2,5 +2,5 @@ package compilers.codeParts.otherLogicsCodeParts;
 
 import compilers.codeParts.CodePart;
 
-public class OtherLogicCP extends CodePart {
+public class Stop  extends CodePart {
 }
