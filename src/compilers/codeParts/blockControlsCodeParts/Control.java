@@ -14,8 +14,8 @@ public class Control  extends CodePart {
     controlType type;
     String blockVarName;
     String argument;
-    int x;
-    int y;
+    String x;
+    String y;
     String unitVarName;
     String shoot;
     Control(controlType type, String blockVarName, String argument){
@@ -23,7 +23,7 @@ public class Control  extends CodePart {
         this.blockVarName = blockVarName;
         this.argument = argument;
     }
-    Control(controlType type, String blockVarName, int x, int y, String shoot){
+    Control(controlType type, String blockVarName, String x, String y, String shoot){
         this.type = type;
         this.blockVarName = blockVarName;
         this.x = x;
@@ -37,13 +37,13 @@ public class Control  extends CodePart {
         this.shoot = shoot;
     }//shootp
 
-    public String getAsCompiledCod(){
+    public String getAsCompiledCode(){
         switch (type){
-            case enable -> {return "...";}
-            case config -> {return "...";}
-            case color -> {return "...";}
-            case shoot -> {return "...";}
-            case shootp -> {return "...";}
+            case enable -> {return String.format("control enabled %s %s", blockVarName, argument);}
+            case config -> {return String.format("control config %s %s", blockVarName, argument);}
+            case color -> {return String.format("control color %s %s", blockVarName, argument);}
+            case shoot -> {return String.format("control shoot %s %s %s", x, y, shoot);}
+            case shootp -> {return String.format("control shoot %s %s", unitVarName, shoot);}
         }
         return null;
     }
