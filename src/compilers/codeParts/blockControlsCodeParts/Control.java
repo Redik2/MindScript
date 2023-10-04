@@ -37,7 +37,7 @@ public class Control  extends CodePart {
         this.shoot = shoot;
     }//shootp
 
-    public String getAsCompiledCod(){
+    public String getAsCompiledCode(){
         switch (type){
             case enable -> {return "...";}
             case config -> {return "...";}
