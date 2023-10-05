@@ -123,6 +123,18 @@ public class Control extends CodePart {
 
     @Override
     public String getAsCompiledCode(int previousCPLastLineIndex) {
+        switch (controlType){
+            case move, pathfind, mine -> {return String.format("ucontrol %s %s %s", controlType.name(), x, y);}
+            case idle, stop, payDrop, payEnter, unbind, autoPathfind -> {return String.format("ucontrol %s", controlType.name());}
+            case itemDrop -> {return String.format("ucontrol %s %s %s", controlType.name(), blockVarName, amount);}
+            case itemTake -> {return String.format("ucontrol %s %s %s %s", controlType.name(), blockVarName, amount, otherVar);}
+            case targetp -> {return String.format("ucontrol %s %s %s", controlType.name(), singleVar, otherVar);}
+            case target, approach -> {return String.format("ucontrol %s %s %s %s", controlType.name(), x, y, otherVar);}
+            case within -> {return String.format("ucontrol %s %s %s %s %s", controlType.name(), x, y, otherVar, returnVarName);}
+            case build -> {return String.format("ucontrol %s %s %s %s %s %s", controlType.name(), x, y, blockVarName, singleVar, otherVar);}
+            case getBlock -> {return String.format("ucontrol %s %s %s %s %s %s", controlType.name(), x, y, returnVarName, returnVarName2, returnVarName3);}
+            case flag, payTake, boost -> {return String.format("ucontrol %s %s", controlType.name(), singleVar);}
+        }
         return null;
     }
 }
