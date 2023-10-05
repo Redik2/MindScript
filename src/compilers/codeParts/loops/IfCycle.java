@@ -1,9 +1,9 @@
-package compilers.codeParts.inputOutput;
+package compilers.codeParts.loops;
 
 import compilers.codeParts.CodePart;
 
-public class Draw extends CodePart {
-    protected Draw() {
+public class IfCycle extends CodePart {
+    protected IfCycle(int compiled_space) {
 
     }
 

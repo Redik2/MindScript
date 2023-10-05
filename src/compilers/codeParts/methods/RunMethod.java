@@ -1,9 +1,9 @@
-package compilers.codeParts.inputOutput;
+package compilers.codeParts.methods;
 
 import compilers.codeParts.CodePart;
 
-public class Draw extends CodePart {
-    protected Draw() {
+public class RunMethod  extends CodePart {
+    protected RunMethod(int compiled_space) {
 
     }
 

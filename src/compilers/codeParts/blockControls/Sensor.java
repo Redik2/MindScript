@@ -1,4 +1,4 @@
-package compilers.codeParts.blockControlsCodeParts;
+package compilers.codeParts.blockControls;
 
 import compilers.codeParts.CodePart;
 
@@ -9,12 +9,13 @@ public class Sensor extends CodePart{
 
     Sensor(String returnVarName, String blockVarName, String sensorType)
     {
-        super(1);
         this.returnVarName = returnVarName;
         this.blockVarName = blockVarName;
         this.sensorType = sensorType;
     }
-    public String getAsCompiledCode(){
+
+    @Override
+    public String getAsCompiledCode(int previousCPLastLineIndex){
         return String.format("sensor %s %s %s", returnVarName, blockVarName, sensorType);
     }
 }

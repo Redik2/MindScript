@@ -1,4 +1,4 @@
-package compilers.codeParts.blockControlsCodeParts;
+package compilers.codeParts.blockControls;
 
 import compilers.codeParts.CodePart;
 
@@ -6,11 +6,11 @@ public class DrawFlush extends CodePart {
     String blockVarName;
     DrawFlush(String blockVarName)
     {
-        super(1);
         this.blockVarName = blockVarName;
     }
 
-    public String getAsCompiledCode(){
+    @Override
+    public String getAsCompiledCode(int previousCPLastLineIndex){
         return String.format("drawflush %s", blockVarName);
     }
 }

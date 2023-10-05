@@ -1,5 +1,4 @@
-package compilers.codeParts.blockControlsCodeParts;
-
+package compilers.codeParts.blockControls;
 import compilers.codeParts.CodePart;
 
 public class Control extends CodePart {
@@ -18,13 +17,11 @@ public class Control extends CodePart {
     String unitVarName;
     String shoot;
     Control(controlType type, String blockVarName, String argument){
-        super(1);
         this.type = type;
         this.blockVarName = blockVarName;
         this.argument = argument;
     }
     Control(controlType type, String blockVarName, String x, String y, String shoot){
-        super(1);
         this.type = type;
         this.blockVarName = blockVarName;
         this.x = x;
@@ -32,14 +29,14 @@ public class Control extends CodePart {
         this.shoot = shoot;
     }//shoot
     Control(controlType type, String blockVarName, String unitVarName, String shoot){
-        super(1);
         this.type = type;
         this.blockVarName = blockVarName;
         this.unitVarName = unitVarName;
         this.shoot = shoot;
     }//shootp
 
-    public String getAsCompiledCode(){
+    @Override
+    public String getAsCompiledCode(int previousCPLastLineIndex){
         switch (type){
             case enable -> {return String.format("control enabled %s %s", blockVarName, argument);}
             case config -> {return String.format("control config %s %s", blockVarName, argument);}

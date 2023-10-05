@@ -1,4 +1,4 @@
-package compilers.codeParts.loopsCodeParts;
+package compilers.codeParts.loops;
 
 import compilers.codeParts.CodePart;
 

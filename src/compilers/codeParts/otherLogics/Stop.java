@@ -1,13 +1,14 @@
-package compilers.codeParts.otherLogicsCodeParts;
+package compilers.codeParts.otherLogics;
 
 import compilers.codeParts.CodePart;
 
 public class Stop  extends CodePart {
     Stop(){
-        super(1);
+
     }
 
-    public String getAsCompiledCode(){
+    @Override
+    public String getAsCompiledCode(int previousCPLastLineIndex){
         return "stop";
     }
 }

@@ -1,15 +1,15 @@
-package compilers.codeParts.otherLogicsCodeParts;
+package compilers.codeParts.otherLogics;
 
 import compilers.codeParts.CodePart;
 
 public class Wait  extends CodePart {
     String waitTime;
     Wait(String waitTime){
-        super(1);
         this.waitTime = waitTime;
     }
 
-    public String getAsCompiledCode(){
+    @Override
+    public String getAsCompiledCode(int previousCPLastLineIndex){
         return String.format("wait %s", waitTime);
     }
 }

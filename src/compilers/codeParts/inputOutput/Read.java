@@ -8,13 +8,13 @@ public class Read  extends CodePart {
     String var;
     Read(String blockVarName, String index, String var)
     {
-        super(1);
         this.index = index;
         this.var = var;
         this.blockVarName = blockVarName;
     }
 
-    public String getAsCompiledCode(){
+    @Override
+    public String getAsCompiledCode(int previousCPLastLineIndex){
         return String.format("read %s %s %s", var, blockVarName, index);
     }
 }

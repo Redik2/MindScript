@@ -1,10 +1,9 @@
-package compilers.codeParts.inputOutput;
+package compilers.codeParts.unitControls;
 
 import compilers.codeParts.CodePart;
 
-public class Draw extends CodePart {
-    protected Draw() {
-
+public class Locate extends CodePart {
+    Locate() {
     }
 
     @Override

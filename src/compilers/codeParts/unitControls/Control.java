@@ -1,10 +1,10 @@
-package compilers.codeParts.unitControlsCodeParts;
+package compilers.codeParts.unitControls;
 
 import compilers.codeParts.CodePart;
 
 public class Control extends CodePart {
-    enum ControlType
-    {
+
+    enum ControlType {
         idle,
         stop,
         move,
@@ -26,6 +26,7 @@ public class Control extends CodePart {
         within,
         unbind
     }
+
     ControlType controlType;
     String singleVar;
     String x;
@@ -35,20 +36,16 @@ public class Control extends CodePart {
     String otherVar;
     String returnVarName;
 
-    Control(ControlType controlType)
-    {
-        super(1);
+    Control(ControlType controlType) {
         this.controlType = controlType;
     }
-    Control(ControlType controlType, String singleVar)
-    {
-        super(1);
+
+    Control(ControlType controlType, String singleVar) {
         this.controlType = controlType;
         this.singleVar = singleVar;
     }
-    Control(ControlType controlType, String arg1, String arg2)
-    {
-        super(1);
+
+    Control(ControlType controlType, String arg1, String arg2) {
         this.controlType = controlType;
         switch (controlType) {
             case move, pathfind -> {
@@ -56,11 +53,16 @@ public class Control extends CodePart {
                 this.y = arg2;
                 break;
             }
-            case itemDrop ->  {
+            case itemDrop -> {
                 this.blockVarName = arg1;
                 this.amount = arg2;
                 break;
             }
         }
     }
-} // крч хз, делай сам, а то я щас сломаю еще что нибудь и вообще запутаемся
+
+    @Override
+    public String getAsCompiledCode(int previousCPLastLineIndex) {
+        return null;
+    }
+}

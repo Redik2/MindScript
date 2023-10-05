@@ -6,11 +6,11 @@ public class Print extends CodePart {
     String text;
     Print(String text)
     {
-        super(1);
         this.text = text;
     }
 
-    public String getAsCompiledCode(){
+    @Override
+    public String getAsCompiledCode(int previousCPLastLineIndex){
         return String.format("print %s", text);
     }
 }

@@ -1,8 +1,8 @@
-package compilers.codeParts.blockControlsCodeParts;
+package compilers.codeParts.unitControls;
 
 import compilers.codeParts.CodePart;
 
-public class Radar  extends CodePart {
+public class Radar extends CodePart {
     enum FilterType {
         any,
         ally,
@@ -31,7 +31,6 @@ public class Radar  extends CodePart {
 
     Radar(FilterType filter1, SortType sortType, String blockVarName, String sortMode, String returnVarName)
     {
-        super(1);
         this.filter1 = filter1;
         this.sortType = sortType;
         this.blockVarName = blockVarName;
@@ -40,7 +39,6 @@ public class Radar  extends CodePart {
     }
     Radar(FilterType filter1, FilterType filter2, SortType sortType, String blockVarName, String sortMode, String returnVarName)
     {
-        super(1);
         this.filter1 = filter1;
         this.filter1 = filter2;
         this.sortType = sortType;
@@ -50,7 +48,6 @@ public class Radar  extends CodePart {
     }
     Radar(FilterType filter1, FilterType filter2, FilterType filter3, SortType sortType, String blockVarName, String sortMode, String returnVarName)
     {
-        super(1);
         this.filter1 = filter1;
         this.filter1 = filter2;
         this.filter1 = filter3;
@@ -59,7 +56,9 @@ public class Radar  extends CodePart {
         this.sortMode = sortMode;
         this.returnVarName = returnVarName;
     }
-    public String getAsCompiledCode(){
-        return String.format("radar %s %s %s %s %s %s %s", filter1.name(), filter2.name(), filter3.name(), sortType.name(), blockVarName, sortMode, returnVarName);
+
+    @Override
+    public String getAsCompiledCode(int previousCPLastLineIndex){
+        return String.format("uradar %s %s %s %s 0 %s %s\n", filter1.name(), filter2.name(), filter3.name(), sortType.name(), sortMode, returnVarName);
     }
 }

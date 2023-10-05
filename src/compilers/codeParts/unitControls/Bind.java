@@ -1,15 +1,15 @@
-package compilers.codeParts.unitControlsCodeParts;
+package compilers.codeParts.unitControls;
 
 import compilers.codeParts.CodePart;
 
 public class Bind extends CodePart{
     String bindType;
     Bind(String bindType){
-        super(1);
         this.bindType = bindType;
     }
 
-    public String getAsCompiledCode(){
+    @Override
+    public String getAsCompiledCode(int previousCPLastLineIndex){
         return String.format("bind %s", bindType);
     }
 }
