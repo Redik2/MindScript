@@ -9,6 +9,7 @@ public class GetLink  extends CodePart {
     {
         this.blockIndex = blockIndex;
         this.returnVarName = returnVarName;
+        super(1);
     }
     public String getAsCompiledCode(){
         return String.format("getlink %s %s", returnVarName, blockIndex);

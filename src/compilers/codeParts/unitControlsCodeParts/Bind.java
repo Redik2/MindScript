@@ -6,6 +6,7 @@ public class Bind extends CodePart{
     String bindType;
     Wait(String bindType){
         this.bindType = bindType;
+        super(1);
     }
 
     public String getAsCompiledCode(){

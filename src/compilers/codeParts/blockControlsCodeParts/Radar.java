@@ -36,6 +36,7 @@ public class Radar  extends CodePart {
         this.blockVarName = blockVarName;
         this.sortMode = sortMode;
         this.returnVarName = returnVarName;
+        super(1);
     }
     Radar(FilterType filter1, FilterType filter2, SortType sortType, String blockVarName, String sortMode, String returnVarName)
     {
@@ -45,6 +46,7 @@ public class Radar  extends CodePart {
         this.blockVarName = blockVarName;
         this.sortMode = sortMode;
         this.returnVarName = returnVarName;
+        super(1);
     }
     Radar(FilterType filter1, FilterType filter2, FilterType filter3, SortType sortType, String blockVarName, String sortMode, String returnVarName)
     {
@@ -55,6 +57,7 @@ public class Radar  extends CodePart {
         this.blockVarName = blockVarName;
         this.sortMode = sortMode;
         this.returnVarName = returnVarName;
+        super(1);
     }
     public String getAsCompiledCode(){
         return String.format("radar %s %s %s %s %s %s %s", filter1.name(), filter2.name(), filter3.name(), sortType.name(), blockVarName, sortMode, returnVarName);

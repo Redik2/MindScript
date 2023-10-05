@@ -11,6 +11,7 @@ public class Read  extends CodePart {
         this.index = index;
         this.var = var;
         this.blockVarName = blockVarName;
+        super(1);
     }
 
     public String getAsCompiledCode(){

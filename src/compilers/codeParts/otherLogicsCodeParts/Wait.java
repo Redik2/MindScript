@@ -6,6 +6,7 @@ public class Wait  extends CodePart {
     String waitTime;
     Wait(String waitTime){
         this.waitTime = waitTime;
+        super(1);
     }
 
     public String getAsCompiledCode(){

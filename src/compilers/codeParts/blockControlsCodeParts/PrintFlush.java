@@ -7,6 +7,7 @@ public class PrintFlush  extends CodePart {
     DrawFlush(String blockVarName)
     {
         this.blockVarName = blockVarName;
+        super(1);
     }
 
     public String getAsCompiledCode(){

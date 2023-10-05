@@ -12,6 +12,7 @@ public class Sensor extends CodePart{
         this.returnVarName = returnVarName;
         this.blockVarName = blockVarName;
         this.sensorType = sensorType;
+        super(1);
     }
     public String getAsCompiledCode(){
         return String.format("sensor %s %s %s", returnVarName, blockVarName, sensorType);

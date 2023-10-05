@@ -6,6 +6,7 @@ public class Print extends CodePart {
     String text;
     Print(String text)
     {
+        super(1);
         this.text = text;
     }
 

@@ -37,15 +37,18 @@ public class Control extends CodePart {
 
     Control(ControlType controlType)
     {
+        super(1);
         this.controlType = controlType;
     }
     Control(ControlType controlType, String singleVar)
     {
+        super(1);
         this.controlType = controlType;
         this.singleVar = singleVar;
     }
     Control(ControlType controlType, String arg1, String arg2)
     {
+        super(1);
         this.controlType = controlType;
         switch (controlType) {
             case ControlType.move -> {

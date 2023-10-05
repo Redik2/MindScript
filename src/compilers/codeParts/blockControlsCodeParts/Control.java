@@ -22,6 +22,7 @@ public class Control  extends CodePart {
         this.type = type;
         this.blockVarName = blockVarName;
         this.argument = argument;
+        super(1);
     }
     Control(controlType type, String blockVarName, String x, String y, String shoot){
         this.type = type;
@@ -29,12 +30,14 @@ public class Control  extends CodePart {
         this.x = x;
         this.y = y;
         this.shoot = shoot;
+        super(1);
     }//shoot
     Control(controlType type, String blockVarName, String unitVarName, String shoot){
         this.type = type;
         this.blockVarName = blockVarName;
         this.unitVarName = unitVarName;
         this.shoot = shoot;
+        super(1);
     }//shootp
 
     public String getAsCompiledCode(){
