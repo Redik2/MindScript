@@ -5,11 +5,22 @@ import compilers.codeParts.CodePart;
 import mindustry.gen.Call;
 
 public class Jump extends CodePart {
-    String boolOperation;
+    public enum BoolOperationType{
+        equal,
+        notEqual,
+        lessThan,
+        lessThanEq,
+        greaterThan,
+        greaterThanEq,
+        strictEqual,
+        always
+    }
+
+    BoolOperationType boolOperation;
     String firstArg;
     String secondArg;
     int jumpToIndex;
-    public Jump(String boolOperation, String firstArg, String secondArg, int jumpToIndex){
+    public Jump(BoolOperationType boolOperation, String firstArg, String secondArg, int jumpToIndex){
         this.boolOperation = boolOperation;
         this.firstArg = firstArg;
         this.secondArg = secondArg;
