@@ -7,9 +7,9 @@ public class GetLink  extends CodePart {
     String blockIndex;
     GetLink(String blockIndex, String returnVarName)
     {
+        super(1);
         this.blockIndex = blockIndex;
         this.returnVarName = returnVarName;
-        super(1);
     }
     public String getAsCompiledCode(){
         return String.format("getlink %s %s", returnVarName, blockIndex);

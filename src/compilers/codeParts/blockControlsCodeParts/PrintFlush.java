@@ -4,10 +4,10 @@ import compilers.codeParts.CodePart;
 
 public class PrintFlush  extends CodePart {
     String blockVarName;
-    DrawFlush(String blockVarName)
+    PrintFlush(String blockVarName)
     {
-        this.blockVarName = blockVarName;
         super(1);
+        this.blockVarName = blockVarName;
     }
 
     public String getAsCompiledCode(){

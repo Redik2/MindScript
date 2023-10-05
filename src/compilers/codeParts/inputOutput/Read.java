@@ -8,10 +8,10 @@ public class Read  extends CodePart {
     String var;
     Read(String blockVarName, String index, String var)
     {
+        super(1);
         this.index = index;
         this.var = var;
         this.blockVarName = blockVarName;
-        super(1);
     }
 
     public String getAsCompiledCode(){

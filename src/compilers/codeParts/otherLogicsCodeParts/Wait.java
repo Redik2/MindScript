@@ -5,8 +5,8 @@ import compilers.codeParts.CodePart;
 public class Wait  extends CodePart {
     String waitTime;
     Wait(String waitTime){
-        this.waitTime = waitTime;
         super(1);
+        this.waitTime = waitTime;
     }
 
     public String getAsCompiledCode(){

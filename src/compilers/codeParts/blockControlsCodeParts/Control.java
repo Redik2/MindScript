@@ -1,9 +1,8 @@
 package compilers.codeParts.blockControlsCodeParts;
 
-import com.sun.jdi.connect.Connector;
 import compilers.codeParts.CodePart;
 
-public class Control  extends CodePart {
+public class Control extends CodePart {
     enum controlType{
         enable,
         shoot,
@@ -19,25 +18,25 @@ public class Control  extends CodePart {
     String unitVarName;
     String shoot;
     Control(controlType type, String blockVarName, String argument){
+        super(1);
         this.type = type;
         this.blockVarName = blockVarName;
         this.argument = argument;
-        super(1);
     }
     Control(controlType type, String blockVarName, String x, String y, String shoot){
+        super(1);
         this.type = type;
         this.blockVarName = blockVarName;
         this.x = x;
         this.y = y;
         this.shoot = shoot;
-        super(1);
     }//shoot
     Control(controlType type, String blockVarName, String unitVarName, String shoot){
+        super(1);
         this.type = type;
         this.blockVarName = blockVarName;
         this.unitVarName = unitVarName;
         this.shoot = shoot;
-        super(1);
     }//shootp
 
     public String getAsCompiledCode(){

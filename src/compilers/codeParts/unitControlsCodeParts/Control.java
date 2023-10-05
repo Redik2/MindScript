@@ -51,17 +51,12 @@ public class Control extends CodePart {
         super(1);
         this.controlType = controlType;
         switch (controlType) {
-            case ControlType.move -> {
+            case move, pathfind -> {
                 this.x = arg1;
                 this.y = arg2;
                 break;
             }
-            case ControlType.pathfind ->  {
-                this.x = arg1;
-                this.y = arg2;
-                break;
-            }
-            case ControlType.itemDrop ->  {
+            case itemDrop ->  {
                 this.blockVarName = arg1;
                 this.amount = arg2;
                 break;

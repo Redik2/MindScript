@@ -4,9 +4,9 @@ import compilers.codeParts.CodePart;
 
 public class Bind extends CodePart{
     String bindType;
-    Wait(String bindType){
-        this.bindType = bindType;
+    Bind(String bindType){
         super(1);
+        this.bindType = bindType;
     }
 
     public String getAsCompiledCode(){
